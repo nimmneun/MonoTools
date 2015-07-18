@@ -5,7 +5,7 @@ Collection of simple php tools.
 <a href='https://coveralls.io/r/nimmneun/MonoTools?branch=master'><img src='https://coveralls.io/repos/nimmneun/MonoTools/badge.svg?branch=master' alt='Coverage Status' /></a>
 
 # MonoCsv
-Yet another simple php csv file/string reader (or wrapper =) using php's Spl(Temp)FileObject to read from files or strings. I just wanted something more convenient, while still keeping all of the SplFileObject functions at my fingertips =)
+Yet another simple php csv file/string reader using php's Spl(Temp)FileObject to read from files or strings. I just wanted something more convenient, while still keeping all of the SplFileObject functions at my fingertips =)
 ```php
 $csv = MonoCsv::load('../data/test01.csv');
 // Skip 2 lines on each loop and do something
