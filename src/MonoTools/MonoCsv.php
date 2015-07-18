@@ -60,7 +60,7 @@ class MonoCsv
      */
     public function next()
     {
-        return (null === $row = $this->spl->fgetcsv()) ? false : $row;
+        return null === $row = $this->spl->fgetcsv() ? false : $row;
     }
 
     /**
@@ -73,7 +73,7 @@ class MonoCsv
     {
         $this->rewind()->skip($int-1);
 
-        return (null === $row = $this->spl->fgetcsv()) ? false : $row;
+        return null === $row = $this->spl->fgetcsv() ? false : $row;
     }
 
     /**
