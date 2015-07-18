@@ -1,0 +1,12 @@
+{
+    "name": "nimmneun/monotools",
+    "require": {
+        "phpunit/phpunit": "4.*",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "MonoTools\\": "src/MonoTools/"
+        }
+    }
+}
