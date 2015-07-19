@@ -60,7 +60,7 @@ class MonoCsv
      */
     public function next()
     {
-        return null === $row = $this->spl->fgetcsv() ? false : $row;
+        return (null === $row = $this->spl->fgetcsv()) ? false : $row;
     }
 
     /**
@@ -73,7 +73,7 @@ class MonoCsv
     {
         $this->rewind()->skip($int-1);
 
-        return null === $row = $this->spl->fgetcsv() ? false : $row;
+        return (null === $row = $this->spl->fgetcsv()) ? false : $row;
     }
 
     /**
@@ -86,7 +86,9 @@ class MonoCsv
     {
         for ($i = 0; $i < $int; $i++)
         {
-            $this->spl->fgetcsv();
+            if (false === $this->spl->fgetcsv()) {
+                break;
+            }
         }
 
         return $this;
@@ -130,7 +132,7 @@ class MonoCsv
 
     /**
      * Set maximum allowed input size to specified size in bytes.
-     * Set to 33% of php's memory limit if not specified.'
+     * Set to 33% of php's memory limit if not specified.
      *
      * @param int $size
      */
