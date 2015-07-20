@@ -35,6 +35,8 @@ class MonoCsvTest extends \PHPUnit_Framework_TestCase
         $row = $csv->row(6);
 
         $this->assertEquals('San Francisco', $row[6]);
+        
+        $this->assertFalse($csv->row(101));
     }
 
     public function testRewind()
