@@ -84,8 +84,7 @@ class MonoCsv
      */
     public function skip($int)
     {
-        for ($i = 0; $i < $int; $i++)
-        {
+        for ($i = 0; $i < $int; $i++) {
             if (false === $this->spl->fgetcsv()) {
                 break;
             }
