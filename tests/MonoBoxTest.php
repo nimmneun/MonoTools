@@ -17,7 +17,7 @@ class MonoBoxTest extends \PHPUnit_Framework_TestCase
     public function testObjectToArray()
     {
         $object = new \MonoTools\SomeGuy();
-        $dummy = \MonoTools\MonoBox::objectToArray($object);
+        $arr = \MonoTools\MonoBox::objectToArray($object);
 
         $this->assertEquals(
             array(
@@ -25,7 +25,7 @@ class MonoBoxTest extends \PHPUnit_Framework_TestCase
                 'last_name'  => 'Doe',
                 'age'        => 35,
                 ),
-            $dummy
+            $arr
         );
     }
 
