@@ -1,3 +1,7 @@
+<?php
+
+namespace MonoTools;
+
 /**
  * @desc dummy class SomeGuy
  */
