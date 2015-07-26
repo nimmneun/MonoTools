@@ -16,7 +16,7 @@ class MonoBoxTest extends \PHPUnit_Framework_TestCase
     
     public function testObjectToArray()
     {
-        $dummy = new SomeGuy();
+        $dummy = new \SomeGuy();
         
         $this->assertEquals(
             array(
