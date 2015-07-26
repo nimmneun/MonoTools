@@ -2,10 +2,6 @@
 
 namespace MonoTools;
 
-/**
- * @author nimmneun
- * @since  26.07.2015 23:39
- */
 class MonoBox
 {
     private static $medoo;
