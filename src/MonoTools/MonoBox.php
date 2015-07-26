@@ -54,10 +54,7 @@ class MonoBox
 
     public static function decamelize($string)
     {
-        return preg_replace_callback(
-            '/[A-Z]/',
-            function ($m) { return '_' . lcfirst($m[0]); },
-            $string);
+        return ltrim(strtolower(preg_replace('/[A-Z]/', '_$0', $string)), '_');
     }
 
     public static function camelize($string)
