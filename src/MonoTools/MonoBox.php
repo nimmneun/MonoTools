@@ -39,12 +39,12 @@ class MonoBox
         return $object;
     }
 
-    public static function objectToArray($entity)
+    public static function objectToArray($object)
     {
         $columns = array();
 
         /** @var EntityInterface $entity */
-        foreach ($entity->toArray() as $key => $value) {
+        foreach ($object->toArray() as $key => $value) {
             $column = MonoBox::decamelize($key);
             $columns[$column] = $value;
         }
